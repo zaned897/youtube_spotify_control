@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Control Spotify with Youtube Reproduction",
+    "version": "1.0",
+    "description": "Pause and play Spotify based on Youtube activity",
+    "permissions": [
+        "tabs",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youtube.com/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ]
+}
